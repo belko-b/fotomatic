@@ -37,16 +37,27 @@ html {
 /* Header */
 
 header {
+  display: flex;
+  align-content: center;
   position: fixed;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  height: 85px;
+  z-index: 1;
 }
 
-header .content {
+header .company-name {
   display: flex;
   align-items: center;
-  padding: 1.875rem;
+  padding-left: 30px;
+}
+
+header div.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  margin-right: 30px;
 }
 
 header .logo {
@@ -73,16 +84,16 @@ header .icon {
   padding-left: .75rem;
 }
 
-header .mobile {
+header div.mobile-nav {
   display: none;
 }
 
 @media only screen and (max-width: 760px) {
-  header .desktop {
+  header div.navigation {
     display: none;
   }
 
-  header .mobile {
+  header div.mobile-nav {
     display: block;
     width: 100%;
   }
